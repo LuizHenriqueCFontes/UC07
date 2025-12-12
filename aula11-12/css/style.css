@@ -1,0 +1,121 @@
+body{
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.cabecalho{
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card{
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover{
+    transform: translate(-5px);
+}
+
+.card-primario{
+    background-color: #e6f7ff;
+    border-left: 5px solid #007bff;
+}
+
+.card-secundario{
+    background-color: #fff0e6;
+    border-left: 5px solid #ff6347;
+}
+
+.card-terciario{
+    background-color: #e6ffe6;
+    border-left: 5px solid #28a745;
+}
+
+.card h2{
+    color: #333;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.destaque{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.destaque-verde{
+    background-color: #28a745; 
+}
+
+.destaque-amarelo{
+    background-color: #ffc107;
+    color: #333;
+}
+
+.destaque-laranja{
+    background-color: #fd7e14;
+    color: #333;
+}
+
+.destaque-azul{
+    background-color: #17a2b8;
+}
+
+.destaque-roxo{
+    background-color: #6f42c1;
+}
+
+.destaque-vermeho{
+    background-color: #dc3545;
+}
+
+.rodape{
+    background-color: #333;
+    color: #999;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .card-container{
+        justify-content: center;
+
+    }
+}
+
+@media (max-width: 768px){
+    .card{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .cabecalho h1{
+        font-size: 1.5em;
+    }
+}
+
+
