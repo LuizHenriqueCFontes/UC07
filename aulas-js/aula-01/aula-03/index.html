@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Desconto Comercial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="card">
+        <h2>Simulador de Desconto</h2>
+
+        <form method="post" id="formDesconto">
+            <label for="nome">Nome do Cliente</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="valor">Valor da Compra</label>
+            <input type="number" name="valor" id="valor" step="0.01">
+
+            <label for="tipoCliente">Tipo de Cliente</label>
+            <select name="tipoCliente" id="tipoCliente">
+                <option value="">Selecione...</option>
+                <option value="comum">Comum</option>
+                <option value="vip">VIP</option>
+                <option value="premium">Premium</option>
+            </select>
+
+            <button type="submit">Calcular Desconto</button>
+        </form>
+
+        <div id="resultado" class="resultado"></div>
+    </div>
+</body>
+</html>
