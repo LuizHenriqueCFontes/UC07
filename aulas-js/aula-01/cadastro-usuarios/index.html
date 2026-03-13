@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Sistema de cadastro de Usuarios</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Usuários</h2>
+
+        <input type="text" name="nome" id="nome" placeholder="Nome do usuário" required maxlength="255" autocomplete="name">
+
+        <input type="email" name="email" id="email" placeholder="Email do usuario" required minlength="7" maxlength="255" autocomplete="email">
+
+        <select name="perfil" id="perfil">
+            <option>Selecione o Perfil</option>
+            <option>Aluno</option>
+            <option>Professor</option>
+            <option>Administrador</option>
+        </select>
+
+        <div class="button">
+            <button class="btn-cadastrar">Cadastrar</button>
+            <button class="btn-listar">Listar</button>
+        </div>
+
+        <div id="mensagem"></div>
+        <div id="listarUsuarios"></div>
+        <div id="totalUsuarios"></div>
+    </div>
+</body>
+</html>

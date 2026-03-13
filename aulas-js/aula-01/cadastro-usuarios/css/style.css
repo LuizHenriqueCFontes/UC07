@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2d3a57, #6366f1);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: white;
+    padding: 30px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+input:focus, select:focus{
+    outline: none;
+    border-color: #2563eb;
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button{
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cadastrar{
+    background: #10b981;
+}
+
+.btn-listar{
+    background: #3b82f6;
+}
+
+button:hover{
+    opacity: 0.9;
+}
+
+#mensagem{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #10b981;
+}
+
+#listaUsuarios{
+    margin-top: 20px;
+    background-color: #f9fafb;
+    padding: 10px;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.usuario{
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.usuario:last-child{
+    border-bottom: none;
+}
+
+.total{
+    margin-top: 10px;
+    font-weight: bold;
+}
