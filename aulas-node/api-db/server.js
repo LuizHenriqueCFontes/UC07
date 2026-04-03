@@ -1,9 +1,16 @@
 // app.js ou server.js
 
 const express = require('express');
+const cors = require("cors");
 const pool = require('./db'); // Importa a conexão com o banco de dados
 
 const app = express();
+
+app.use(cors ({
+    origin: "http://127.0.0.1:5500"
+
+}));
+
 const PORT = 3001;
 
 // Middleware
@@ -64,21 +71,15 @@ app.post('/usuarios', async (req, res) => {
 
     try {
         const [result] = await pool.query(
-            "UPDATE usuarios SET nome = ?, email = ? WHERE id = ?",
-            [nome, email, id]
+            "INSERT INTO usuarios (nome, email) VALUES(?, ?)",
+            [nome, email]
         );   
-        
-        if(result.affectedRows === 0){
-            return res.status(404).json({
-                mensagem: "Usuário não encontrado",error: true
-            });
-        }
 
-        const usuarioAtualizado = {id, nome, email};
+        const novoUsuario = {id: result.insertId, nome, email};
 
-        res.json({
-            mensagem: "Usuário atualizado com sucesso",
-            data: usuarioAtualizado
+        res.status(201).json({
+            mensagem: "Usuário criado com sucesso",
+            data: novoUsuario
         });
 
     }catch(error){
